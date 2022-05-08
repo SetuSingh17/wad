@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="form.css" rel="StyleSheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>REGISTRATION FORM</h1>
+    <form name="Registration">
+        <div class="form">
+            <div class="title">Welcome</div>
+            <label for="firstname" class="placeholder">First name</label>
+            <input id="user" class="input" name="name" type="text" placeholder=" USERNAME" />
+            <label for="email" class="placeholder">E-mail</label>
+            <input id="email" class="input" name="email" type="email" placeholder="email" />
+            <label for="number" class="placeholder">Mobile No.</label>
+            <input id="number" class="input" name="mobile" type="text" placeholder="Mobile no. " />
+            <label for="password" class="placeholder">Password</label>
+            <input id="psw" class="input" name="pass" type="password" placeholder="Password" />
+            <label for="pass" class="placeholder">Re-enter password</label>
+            <input id="pass" class="input" name="pasw" type="password" placeholder="Comform Password" />
+            <button type="submit" class="input btn" onclick="saveData()" class="submit">SUBMIT</button>
+    </form>
+    </div>
+    <script src="form2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "#ffffff");
+
+            });
+            $("button").hover(function () {
+                $(this).css("background-color", "orange");
+            }, function () {
+                $(this).css("background-color", "green");
+            });
+        });
+        function saveData() {
+            let user, email, contact, psw, pass;
+            user = document.getElementById('user')
+            email = document.getElementById('email')
+            contact = document.getElementById('number')
+            psw = document.getElementById('psw')
+            pass = document.getElementById('pass')
+
+            localStorage.setItem("firstname", user);
+            localStorage.setItem("email", email);
+            localStorage.setItem("mobile", contact);
+            localStorage.setItem("pass", psw);
+            localStorage.setItem("pasw", pass);
+        }
+    </script>
+</body>
+
+</html>
