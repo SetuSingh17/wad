@@ -1,0 +1,26 @@
+docker commands
+
+version -  docker - -version [OPTIONS] 
+pull - docker pull [OPTIONS] NAME[: TAG|@DIGEST]
+docker ps -all: Lists all containers 
+
+This command is used to run a command in a running container 
+
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+$ docker image push registry-host:5000/myadmin/rhel-httpd:lates
+------------------------------------------------------------------------
+
+kubernets commands
+minikube version
+minikube start
+minikube status
+kubectl cluster-info
+kubectl get node
+minikube docker-env
+kubenetctl create deployment amdocsk8s2 --image=amdocsk8s --port=8081
+kubectl get deployment 
+kubectl decribe deployment amdocsk8s2
+kubectl expose deployment amdocsk8s2 --type= NodePort
+
+
